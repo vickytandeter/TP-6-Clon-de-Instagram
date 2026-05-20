@@ -1,23 +1,43 @@
 import React from "react";
+import { FiSend } from "react-icons/fi";
 
-function publicacion({post, onSelect}) 
+function Publicacion({ post, onSelect }) 
 {
     return (
-        <div class="publicacion" onClick={() => onSelect(post)}>
-            
-            {post.contenido !== "N/A" && (
-                <img src={post.contenido} className="publicacion-img"/>
-            )}
 
-            <div class="publicacionInfo">
-                <p>{post.likes}</p>
-                <h3>{post.usuario}</h3>
-                <p>{post.descripcion}</p>
-                <p>{post.fecha}</p>
+        <div 
+            className="publicacion"
+            onClick={() => onSelect(post)}
+        >
+
+            <img
+                src={post.contenido}
+                className="publicacion-img"
+            />
+
+            <div className="publicacion-footer">
+                <div className="publicacion-usuario">
+                    <img
+                        src="https://i.pravatar.cc/40"
+                        className="foto-perfil"
+                    />
+                    <p>@{post.usuario}</p>
+                </div>
+                <div className="publicacion-acciones">
+                    <button>
+                        <FiHeart />
+                    </button>
+                    <button>
+                        <FiMessageCircle />
+                    </button>
+                    <button>
+                        <FiSend />
+                    </button>
+                </div>
             </div>
-
         </div>
+
     );
 }
 
-export default publicacion;
+export default Publicacion;

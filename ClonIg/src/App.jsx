@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 import Feed from "./components/Feed";
-import { searchPost, getPostDetail } from "./services/api";
-import './App.css'
+import DetallePublicacion from "./components/DetallePublicacion";
+import './App.css';
 
-export default function App() 
+function App() 
 {
     const [publicaciones, setPublicaciones] = useState([]);
     const [postSeleccionado, setPostSeleccionado] = useState(null);
@@ -19,7 +20,10 @@ export default function App()
                     contenido: gato.url,
                     usuario: `cat_user_${index + 1}`,
                     descripcion: "Un gatito muy lindo 🐱",
-                    fecha: "Hace unas horas"
+                    fecha: "Hace unas horas",
+                    likes: Math.floor(Math.random() * 500),
+                    comentarios: Math.floor(Math.random() * 100),
+                    reenviados: Math.floor(Math.random() * 50)
                 }));
 
                 setPublicaciones(publicacionesFormateadas);
@@ -30,11 +34,24 @@ export default function App()
     return (
         <div>
 
-            <Feed
-                publicaciones={publicaciones}
-                onSelect={setPostSeleccionado}
-            />
+            {postSeleccionado ? (
+
+                <DetallePublicacion
+                    post={postSeleccionado}
+                    onVolver={() => setPostSeleccionado(null)}
+                />
+
+            ) : (
+
+                <Feed
+                    publicaciones={publicaciones}
+                    onSelect={setPostSeleccionado}
+                />
+
+            )}
 
         </div>
     );
 }
+
+export default App;
