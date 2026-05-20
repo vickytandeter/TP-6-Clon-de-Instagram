@@ -1,33 +1,56 @@
 import React from "react";
-import { FiSend } from "react-icons/fi";
+
+import {
+    FiSend,
+    FiHeart,
+    FiMessageCircle,
+    FiX
+} from "react-icons/fi";
 
 function DetallePublicacion({ post, onVolver })
 {
     return (
 
-        <div className="detallePublicacion">
+        <div className="overlay">
+            <div className="modalPublicacion">
 
-            <button onClick={onVolver}>
-                ← Feed
-            </button>
+                <button
+                    className="cerrarModal"
+                    onClick={onVolver}
+                >
+                    <FiX/>
+                </button>
 
-            <img
-                src={post.contenido}
-                className="detalle-img"
-            />
+                <img src={post.contenido} className="modalImg"/>
 
-            <div className="detalle-info">
+                <div className="modalInfo">
+                    <div className="modalUsuario">
 
-                <h2>{post.usuario}</h2>
+                        <img src="https://i.pravatar.cc/40" className="fotoPerfil"/>
+                        <h3>@{post.usuario}</h3>
 
-                <p>{post.descripcion}</p>
+                    </div>
 
-                <p>{post.fecha}</p>
+                    <p className="modalDescripcion">{post.descripcion}</p>
 
-                <div className="estadisticas">
-                    <button><FiHeart/> {post.likes} likes</button>
-                    <button><FiMessageCircle/> {post.comentarios} comentarios</button>
-                    <button><FiSend/> {post.reenviados} reenviados</button>
+                    <div className="modalInteracciones">
+
+                        <button>
+                            <FiHeart/>
+                            {post.likes}
+                        </button>
+
+                        <button>
+                            <FiMessageCircle/>
+                            {post.comentarios}
+                        </button>
+
+                        <button>
+                            <FiSend/>
+                            {post.reenviados}
+                        </button>
+
+                    </div>
                 </div>
             </div>
         </div>

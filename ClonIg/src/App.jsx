@@ -3,6 +3,7 @@ import axios from "axios";
 import Feed from "./components/Feed";
 import DetallePublicacion from "./components/DetallePublicacion";
 import './App.css';
+import BarraLateral from "./components/BarraLateral";
 
 function App() 
 {
@@ -32,23 +33,32 @@ function App()
     }, []);
 
     return (
-        <div>
 
-            {postSeleccionado ? (
+        <div className="layout">
 
-                <DetallePublicacion
-                    post={postSeleccionado}
-                    onVolver={() => setPostSeleccionado(null)}
-                />
+            <BarraLateral/>
 
-            ) : (
+            <div className="app">
+
+                <h1 className="titulo">
+                    TRENDING
+                </h1>
 
                 <Feed
                     publicaciones={publicaciones}
                     onSelect={setPostSeleccionado}
                 />
 
-            )}
+                {postSeleccionado && (
+
+                    <DetallePublicacion
+                        post={postSeleccionado}
+                        onVolver={() => setPostSeleccionado(null)}
+                    />
+
+                )}
+
+            </div>
 
         </div>
     );

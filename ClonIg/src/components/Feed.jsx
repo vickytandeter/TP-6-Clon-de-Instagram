@@ -5,7 +5,6 @@ function Feed({ publicaciones, onSelect }) {
 
     return (
         <div className="feed">
-            <h1>TRENDING</h1>
             <div className="publicaciones">
                 {publicaciones.map((post) => (
                     <Publicacion

@@ -1,39 +1,35 @@
 import React from "react";
 import { FiSend } from "react-icons/fi";
+import { FiHeart } from "react-icons/fi";
+import { FiMessageCircle } from "react-icons/fi";
 
 function Publicacion({ post, onSelect }) 
 {
     return (
 
-        <div 
-            className="publicacion"
-            onClick={() => onSelect(post)}
-        >
+        <div className="publicacion" onClick={() => onSelect(post)}>
 
-            <img
-                src={post.contenido}
-                className="publicacion-img"
-            />
+            <img src={post.contenido} className="publicacionImg"/>
 
-            <div className="publicacion-footer">
-                <div className="publicacion-usuario">
-                    <img
-                        src="https://i.pravatar.cc/40"
-                        className="foto-perfil"
-                    />
+            <div className="publicacionDesc">
+                
+                <div className="publicacionUsuario">
+                    <img src="https://i.pravatar.cc/40" className="fotoPerfil"/>
                     <p>@{post.usuario}</p>
                 </div>
-                <div className="publicacion-acciones">
+
+                <div className="publicacionInteracciones">
                     <button>
-                        <FiHeart />
+                        <FiHeart/>
                     </button>
                     <button>
-                        <FiMessageCircle />
+                        <FiMessageCircle/>
                     </button>
                     <button>
-                        <FiSend />
+                        <FiSend/>
                     </button>
                 </div>
+                
             </div>
         </div>
 
