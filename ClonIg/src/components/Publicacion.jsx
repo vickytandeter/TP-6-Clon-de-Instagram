@@ -1,4 +1,6 @@
-export default function publicacion({post, onSelect}) 
+import React from "react";
+
+function publicacion({post, onSelect}) 
 {
     return (
         <div class="publicacion" onClick={() => onSelect(post)}>
@@ -17,3 +19,5 @@ export default function publicacion({post, onSelect})
         </div>
     );
 }
+
+export default publicacion;

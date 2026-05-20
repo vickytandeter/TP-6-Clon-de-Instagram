@@ -1,6 +1,7 @@
+import React from "react";
 import { useState } from "react";
 
-export default function SearchBar({ onSearch, onClear }) {
+function SearchBar({ onSearch, onClear }) {
   const [input, setInput] = useState("");
 
   const handleSubmit = (e) => {
@@ -29,3 +30,5 @@ export default function SearchBar({ onSearch, onClear }) {
     </form>
   );
 }
+
+export default SearchBar;

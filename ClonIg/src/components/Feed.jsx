@@ -1,7 +1,7 @@
-import Publicacion from "./Publicacion";
-import Publicaciones from "../data/Publicaciones";
+import React from "react";
+import publicacion from "./Publicacion";
 
-export default function Feed({onSelect}) {
+function Feed({onSelect}) {
 
     return (
 
@@ -17,3 +17,5 @@ export default function Feed({onSelect}) {
 
     )
 }
+
+export default Feed;
