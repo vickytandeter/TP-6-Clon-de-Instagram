@@ -6,13 +6,20 @@
     box-sizing: border-box;
 }
 
-body{
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
     background-color: #020631;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
-.layout{
+.layout {
     display: flex;
+    width: 95%;
+    min-height: 100vh;
+    background-color: #020631;
+    margin-left: 2.5%;
 }
 
 .app{

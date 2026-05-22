@@ -4,6 +4,7 @@ import Feed from "./components/Feed";
 import DetallePublicacion from "./components/DetallePublicacion";
 import './App.css';
 import BarraLateral from "./components/BarraLateral";
+import Header from "./components/Header";
 
 function App() 
 {
@@ -20,6 +21,7 @@ function App()
                     id: gato.id,
                     contenido: gato.url,
                     usuario: `cat_user_${index + 1}`,
+                    fotoPerfil: `https://i.pravatar.cc/40?img=${index + 1}`,
                     descripcion: "Un gatito muy lindo 🐱",
                     fecha: "Hace unas horas",
                     likes: Math.floor(Math.random() * 500),
@@ -35,6 +37,8 @@ function App()
     return (
 
         <div className="layout">
+            
+            <Header/>
 
             <BarraLateral/>
 

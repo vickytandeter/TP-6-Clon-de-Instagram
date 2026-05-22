@@ -14,7 +14,7 @@ function Publicacion({ post, onSelect })
             <div className="publicacionDesc">
                 
                 <div className="publicacionUsuario">
-                    <img src="https://i.pravatar.cc/40" className="fotoPerfil"/>
+                    <img src={post.fotoPerfil} className="fotoPerfil"/>
                     <p>@{post.usuario}</p>
                 </div>
 

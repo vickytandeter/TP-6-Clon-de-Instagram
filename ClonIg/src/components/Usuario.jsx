@@ -2,8 +2,7 @@ import React from "react";
 import {
     FiHeart,
     FiUser,
-    FiCheckCircle,
-    FiInstagram
+    FiCheckCircle
 } from "react-icons/fi";
 import fotoPerfil from "../assets/img/fotoPerfil.png";
 
@@ -12,10 +11,6 @@ function Usuario(){
     return(
 
         <div className="usuario">
-
-            <h1>
-                <FiInstagram/>Instagram
-            </h1>
 
             <img src={fotoPerfil}/>
 

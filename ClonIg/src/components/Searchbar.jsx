@@ -21,12 +21,6 @@ function SearchBar({ onSearch, onClear }) {
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
-
-      <button type="submit">Buscar</button>
-
-      <button type="button" onClick={handleClear}>
-        Limpiar
-      </button>
     </form>
   );
 }
