@@ -13,11 +13,14 @@ function Header(){
     return(
         <header>
 
-             <h1>
+            <h1>
                 <FiInstagram/>Instagram
             </h1>
 
-            <SearchBar/>
+            <div className = "buscar">
+                <SearchBar/>
+            </div>
+
             <div className="headerIcons">   
                 <button>
                     <FiSettings/>
@@ -32,7 +35,7 @@ function Header(){
             
 
             <div className = "newPost">
-                <button><FiPlusCircle/>Nueva Publicación</button>
+                <button><FiPlusCircle/>New Post</button>
             </div>
 
         </header>

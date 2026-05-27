@@ -36,35 +36,38 @@ function App()
 
     return (
 
-        <div className="layout">
-            
+         <>
+
             <Header/>
 
-            <BarraLateral/>
+            <div className="layout">
 
-            <div className="app">
+                <BarraLateral/>
 
-                <h1 className="titulo">
-                    TRENDING
-                </h1>
+                <div className="app">
 
-                <Feed
-                    publicaciones={publicaciones}
-                    onSelect={setPostSeleccionado}
-                />
+                    <h1 className="titulo">
+                        TRENDING
+                    </h1>
 
-                {postSeleccionado && (
-
-                    <DetallePublicacion
-                        post={postSeleccionado}
-                        onVolver={() => setPostSeleccionado(null)}
+                    <Feed
+                        publicaciones={publicaciones}
+                        onSelect={setPostSeleccionado}
                     />
 
-                )}
+                    {postSeleccionado && (
+
+                        <DetallePublicacion
+                            post={postSeleccionado}
+                            onVolver={() => setPostSeleccionado(null)}
+                        />
+
+                    )}
+
+                </div>
 
             </div>
-
-        </div>
+        </>
     );
 }
 
