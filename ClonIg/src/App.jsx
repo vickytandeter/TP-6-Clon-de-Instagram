@@ -46,11 +46,15 @@ function App()
                 <BarraLateral/>
 
                 <div className="app">
+
+                    <h1>
+                        HISTORIAS
+                    </h1>
                     
                     <ListaHistorias historias={publicaciones} />
 
-                    <h1 className="titulo">
-                        TRENDING
+                    <h1>
+                        FEED
                     </h1>
 
                     <Feed
