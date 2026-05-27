@@ -148,6 +148,7 @@ html, body, #root {
 .feed{
     column-count: 3;
     column-gap: 25px;
+    margin-top: 10px;
 }
 
 /* ----------------------PUBLICACION----------------------*/
@@ -230,34 +231,24 @@ html, body, #root {
 .modalPublicacion{
     width: 75%;
     max-width: 1200px;
-
     height: 85vh;
-
     background-color: #111;
-
     border-radius: 10px;
-
     display: flex;
-
     overflow: hidden;
-
     position: relative;
 }
 
 .modalImg{
     width: 65%;
     height: 100%;
-
     object-fit: cover;
 }
 
 .modalInfo{
     width: 35%;
-
     padding: 20px;
-
     color: white;
-
     display: flex;
     flex-direction: column;
 }
@@ -265,39 +256,29 @@ html, body, #root {
 .modalUsuario{
     display: flex;
     align-items: center;
-
     gap: 10px;
-
     margin-bottom: 20px;
 }
 
 .modalDescripcion{
     margin-bottom: 30px;
-
     line-height: 1.5;
 }
 
 .modalInteracciones{
     margin-top: auto;
-
     display: flex;
-
     gap: 20px;
 }
 
 .modalInteracciones button{
     background: none;
     border: none;
-
     color: white;
-
     font-size: 1.1rem;
-
     display: flex;
     align-items: center;
-
     gap: 8px;
-
     cursor: pointer;
 }
 
@@ -407,4 +388,67 @@ header button{
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+/*-----------HISTORIAS-----------*/
+
+.listaHistorias{
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.historias{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.historia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 125px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.historiaImg{
+    width: 105px;
+    height: 105px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    padding: 3px;
+
+    background:
+        linear-gradient(#020631, #020631) padding-box,
+        linear-gradient(
+            45deg,
+            #feda75,
+            #fa7e1e,
+            #d62976,
+            #962fbf,
+            #4f5bd5
+        ) border-box;
+
+    border: 3px solid transparent;
+}
+
+.historia .publicacionUsuario{
+    margin-top: 10px;
+}
+
+.historia .publicacionUsuario p{
+    font-size: 0.75rem;
+    color: white;
+    max-width: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    opacity: 0.9;
 }

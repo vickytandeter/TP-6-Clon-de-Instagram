@@ -5,6 +5,7 @@ import DetallePublicacion from "./components/DetallePublicacion";
 import './App.css';
 import BarraLateral from "./components/BarraLateral";
 import Header from "./components/Header";
+import ListaHistorias from "./components/ListaHistorias";
 
 function App() 
 {
@@ -45,6 +46,8 @@ function App()
                 <BarraLateral/>
 
                 <div className="app">
+                    
+                    <ListaHistorias historias={publicaciones} />
 
                     <h1 className="titulo">
                         TRENDING
