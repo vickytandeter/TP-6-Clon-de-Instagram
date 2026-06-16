@@ -47,15 +47,11 @@ function App()
 
                 <div className="app">
 
-                    <h1>
-                        HISTORIAS
-                    </h1>
+                    <h1>HISTORIAS</h1>
                     
                     <ListaHistorias historias={publicaciones} />
 
-                    <h1>
-                        FEED
-                    </h1>
+                    <h1>FEED</h1>
 
                     <Feed
                         publicaciones={publicaciones}
@@ -68,7 +64,6 @@ function App()
                             post={postSeleccionado}
                             onVolver={() => setPostSeleccionado(null)}
                         />
-
                     )}
 
                 </div>

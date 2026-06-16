@@ -2,6 +2,7 @@ import React from "react";
 import { FiSend } from "react-icons/fi";
 import { FiHeart } from "react-icons/fi";
 import { FiMessageCircle } from "react-icons/fi";
+import './estilos/publicacion.css'
 
 function Publicacion({ post, onSelect }) 
 {

@@ -1,4 +1,5 @@
 import React from "react";
+import './estilos/historia.css'
 
 function Historia({ historia }) {
 

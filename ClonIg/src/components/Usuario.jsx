@@ -5,6 +5,7 @@ import {
     FiCheckCircle
 } from "react-icons/fi";
 import fotoPerfil from "../assets/img/fotoPerfil.png";
+import './estilos/usuario.css'
 
 function Usuario(){
 

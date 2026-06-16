@@ -7,15 +7,14 @@ import {
     FiPlusCircle
 } from "react-icons/fi";
 import SearchBar from "./Searchbar";
+import './estilos/header.css'
 
 function Header(){
 
     return(
         <header>
 
-            <h1>
-                <FiInstagram/>Instagram
-            </h1>
+            <h1> <FiInstagram/>Instagram </h1>
 
             <div className = "buscar">
                 <SearchBar/>

@@ -6,6 +6,7 @@ import {
     FiMessageCircle,
     FiX
 } from "react-icons/fi";
+import './estilos/detallePublicacion.css'
 
 function DetallePublicacion({ post, onVolver })
 {

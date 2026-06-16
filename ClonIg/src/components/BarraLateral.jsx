@@ -4,6 +4,7 @@ import { FiHeart } from "react-icons/fi";
 import { FiMessageCircle } from "react-icons/fi";
 import Usuario from "./Usuario";
 import Menu from "./MenuLateral";
+import './estilos/barraLateral.css'
 
 function BarraLateral(){
 

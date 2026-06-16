@@ -6,6 +6,7 @@ import {
     FiTv,
     FiBell
 } from "react-icons/fi";
+import './estilos/menu.css'
 
 function Menu(){
 

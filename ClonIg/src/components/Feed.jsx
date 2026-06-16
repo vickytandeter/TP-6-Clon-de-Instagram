@@ -1,5 +1,6 @@
 import React from "react";
 import Publicacion from "./Publicacion";
+import './estilos/feed.css'
 
 function Feed({ publicaciones, onSelect }) {
 
