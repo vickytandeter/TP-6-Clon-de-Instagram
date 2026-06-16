@@ -1,16 +1,12 @@
 import React from "react";
 import { useState } from "react";
 
-function SearchBar({ onSearch, onClear }) {
+function SearchBar({ onSearch }) {
   const [input, setInput] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     onSearch(input);
-  };
-
-  const handleClear = () => {
-    setInput("");
   };
 
   return (

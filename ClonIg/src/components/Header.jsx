@@ -6,7 +6,7 @@ import {
     FiSend,
     FiPlusCircle
 } from "react-icons/fi";
-import SearchBar from "./SearchBar";
+import SearchBar from "./Searchbar";
 
 function Header(){
 
